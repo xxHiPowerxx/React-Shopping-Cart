@@ -14,7 +14,7 @@ class Counter extends Component {
           </div>
           <button
             onClick={() => this.props.onIncrement(counter)}
-            className="btn btn-increment-counter btn-secondary btn-sm"
+            className="btn btn-increment-counter btn-success btn-sm"
           >
             Increment
           </button>
