@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
 
-import "./App.css";
+import "./assets/sass/App.css";
 
 class App extends Component {
   numOfCounters(numOfCounters) {
