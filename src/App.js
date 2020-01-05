@@ -66,6 +66,18 @@ class App extends Component {
     this.setState({ counters });
   };
 
+  handleDecrement = counter => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    let thisCounter = counters[index];
+
+    if (thisCounter.value > 0) {
+      thisCounter.value--;
+      this.setState({ counters });
+    }
+  };
+
   handleReset = () => {
     const counters = this.initiateCounters();
     this.setState({ counters });
@@ -97,6 +109,7 @@ class App extends Component {
             counters={this.state.counters}
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
           />
         </main>
