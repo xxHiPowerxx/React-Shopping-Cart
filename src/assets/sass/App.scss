@@ -1,0 +1,45 @@
+.smooth-transition {
+  transition: all.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.flex-align-items-center {
+  display: flex;
+  align-items: center;
+}
+.counter {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  max-width: 30rem;
+  border-radius: 0.25rem;
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 0.35rem 0.35rem rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+  &,
+  &:hover ~ .counter:focus-within {
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.ctnr-counter-value,
+.counter-controls {
+  @extend .flex-align-items-center;
+}
+.counter-controls {
+  > :not(:first-child) {
+    margin-left: 0.5em;
+  }
+  > :not(:last-child) {
+    margin-right: 0.5em;
+  }
+}
+.ctnr-counter-value {
+  min-width: 2.616rem;
+  justify-content: center;
+}
+.counter-value {
+  padding: 0.25rem 0.5rem;
+}
