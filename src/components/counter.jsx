@@ -3,27 +3,33 @@ import React, { Component } from "react";
 class Counter extends Component {
   render() {
     return (
-      <div>
-        <h4>Product #{this.props.counter.id}</h4>
-        <span className={this.getBadgeClasses()}>{this.formatValue()}</span>
-        <button
-          onClick={() => this.props.onIncrement(this.props.counter)}
-          className="btn btn-secondary btn-sm"
-        >
-          Increment
-        </button>
-        <button
-          onClick={() => this.props.onDelete(this.props.counter.id)}
-          className="btn btn-danger btn-sm m-2"
-        >
-          Delete
-        </button>
+      <div className="counter smooth-transition">
+        <h4 className="counter-title">Product #{this.props.counter.id}</h4>
+        <div className="counter-controls">
+          <div className="ctnr-counter-value">
+            <span className={this.getBadgeClasses() + " counter-value"}>
+              {this.formatValue()}
+            </span>
+          </div>
+          <button
+            onClick={() => this.props.onIncrement(this.props.counter)}
+            className="btn btn-increment-counter btn-secondary btn-sm"
+          >
+            Increment
+          </button>
+          <button
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="btn btn-delete-counter btn-danger btn-sm"
+          >
+            Delete
+          </button>
+        </div>
       </div>
     );
   }
 
   getBadgeClasses() {
-    let classes = "badge m-2 p-2 badge-";
+    let classes = "badge badge-";
     classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }
