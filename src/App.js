@@ -57,19 +57,22 @@ class App extends Component {
     console.log("App - Mounted");
   }
 
-  handleIncrement = counter => {
-    console.log(counter);
+  getThisCounter(counter) {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
+    return { counters, index };
+  }
+
+  handleIncrement = counter => {
+    console.log(counter);
+    const { counters, index } = this.getThisCounter(counter);
     counters[index].value++;
     this.setState({ counters });
   };
 
   handleDecrement = counter => {
-    const counters = [...this.state.counters];
-    const index = counters.indexOf(counter);
-    counters[index] = { ...counter };
+    const { counters, index } = this.getThisCounter(counter);
     let thisCounter = counters[index];
 
     if (thisCounter.value > 0) {
