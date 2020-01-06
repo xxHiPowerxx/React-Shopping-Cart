@@ -11,7 +11,7 @@ class Counters extends Component {
       onDecrement
     } = this.props;
     return (
-      <div>
+      <div className="counters">
         <button onClick={onReset} className="btn btn-primary btn-sm m-2">
           Reset
         </button>
