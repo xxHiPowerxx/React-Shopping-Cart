@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ProductsOnPageForm from "./productsonpageform";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 // Stateless Functional Component
 
@@ -16,6 +18,7 @@ class NavBar extends Component {
               <span className="products-in-cart-qty badge badge-pill badge-secondary">
                 {totalCounters}
               </span>
+              <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
             </div>
           </div>
         </div>
