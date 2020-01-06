@@ -7,14 +7,18 @@ class NavBar extends Component {
   render() {
     const { onSubmit, totalCounters } = this.props;
     return (
-      <nav className="navbar navbar-light bg-light container">
-        <ProductsOnPageForm onSubmit={onSubmit} />
-        <span className="navbar-brand">
-          <span className="m-2">Products In Cart</span>
-          <span className="badge badge-pill badge-secondary">
-            {totalCounters}
-          </span>
-        </span>
+      <nav className="navbar navbar-dark bg-dark text-light">
+        <div className="container container-navbar-inner">
+          <ProductsOnPageForm onSubmit={onSubmit} />
+          <div className="ctnr-products-in-cart">
+            <span className="products-in-cart">Products In Cart</span>
+            <div className="ctnr-products-in-cart-qty">
+              <span className="products-in-cart-qty badge badge-pill badge-secondary">
+                {totalCounters}
+              </span>
+            </div>
+          </div>
+        </div>
       </nav>
     );
   }

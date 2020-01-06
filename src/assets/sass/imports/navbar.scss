@@ -1,8 +1,34 @@
 @import "/productsonpageform.scss";
 .navbar {
-  justify-content: flex-end;
-  align-items: center;
+  > {
+    .container-navbar-inner {
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
 }
-.navbar-brand {
-  @extend .flex-align-items-center;
+.container-navbar-inner {
+  > :not(:first-child) {
+    margin-left: 2rem;
+  }
+}
+
+.ctnr-products-in-cart {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+}
+.ctnr-products-in-cart-qty {
+  display: flex;
+  justify-content: center;
+}
+.products-in-cart-qty {
+  font-size: 1rem;
+}
+.products-in-cart {
+  margin-bottom: 0.5rem;
+}
+.products-on-page {
+  display: flex;
+  align-items: flex-end;
 }
