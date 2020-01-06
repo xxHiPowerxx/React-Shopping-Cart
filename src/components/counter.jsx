@@ -8,6 +8,7 @@ class Counter extends Component {
         <h4 className="counter-title">Product #{counter.id}</h4>
         <div className="counter-controls">
           <div className="ctnr-counter-value">
+            <small class="quantity">Qty.</small>
             <span className={this.getBadgeClasses() + " counter-value"}>
               {this.formatValue()}
             </span>

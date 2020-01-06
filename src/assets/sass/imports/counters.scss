@@ -17,9 +17,14 @@
     margin-bottom: 1rem;
   }
 }
-.ctnr-counter-value,
 .counter-controls {
+  display: flex;
+  align-items: flex-end;
+}
+.ctnr-counter-value {
   @extend .flex-align-items-center;
+  flex-direction: column;
+  justify-content: center;
 }
 .counter-controls {
   > :not(:first-child) {
