@@ -5,9 +5,8 @@ import Counters from "./components/counters";
 import "./assets/sass/App.scss";
 
 class App extends Component {
-  numOfCounters(numOfCounters) {
-    return numOfCounters;
-  }
+  numOfProductsValue = 5;
+
   constructCounters(num, index, value) {
     const counters = [];
     for (let i = 0; i < num; i++) {
@@ -23,12 +22,9 @@ class App extends Component {
     // setCountersValue(index, value);
     return counters;
   }
-  initiateCounters() {
-    const numOfCounters = this.numOfCounters(5);
-    const counters =
-      this.state && this.state.counters > numOfCounters
-        ? this.state.counters
-        : this.constructCounters(numOfCounters);
+  initiateCounters(numOfCounters) {
+    numOfCounters = numOfCounters ? numOfCounters : this.numOfProductsValue;
+    const counters = this.constructCounters(numOfCounters);
     counters.map(c => {
       c.value = 0;
       return c;
@@ -42,8 +38,8 @@ class App extends Component {
     //   { id: 1, value: 0 },
     //   { id: 1, value: 0 }
     // ]
-
-    counters: this.initiateCounters()
+    numOfProductsValue: this.numOfProductsValue,
+    counters: this.initiateCounters(this.numOfProductsValue)
     // counters: this.constructCounters(5, 2, 4)
   };
 
@@ -80,7 +76,14 @@ class App extends Component {
       this.setState({ counters });
     }
   };
+  handleSubmit = productInputValue => {
+    const numOfCounters = productInputValue;
+    // console.log("numOfCounters", numOfCounters);
 
+    const counters = this.initiateCounters(numOfCounters);
+    // console.log("counters", counters);
+    this.setState({ counters });
+  };
   handleReset = () => {
     const counters = this.initiateCounters();
     this.setState({ counters });
@@ -106,6 +109,7 @@ class App extends Component {
       <React.Fragment>
         <NavBar
           totalCounters={this.state.counters.filter(c => c.value > 0).length}
+          onSubmit={this.handleSubmit}
         />
         <main className="container">
           <Counters
