@@ -1,0 +1,24 @@
+.ctnr-products-in-cart {
+  display: flex;
+  flex-direction: column;
+}
+.ctnr-products-in-cart-qty {
+  display: flex;
+  justify-content: center;
+  > :not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
+.products-in-cart-qty {
+  font-size: 1rem;
+}
+.products-in-cart {
+  margin-bottom: 0.5rem;
+}
+.products-on-page {
+  display: flex;
+  align-items: flex-end;
+}
+.cart-icon {
+  font-size: 1.6rem;
+}
