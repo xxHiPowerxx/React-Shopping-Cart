@@ -1,6 +1,10 @@
+@import "/reactshoppingcartlogo.scss";
 @import "/productsonpageform.scss";
 @import "/productsincart.scss";
 .navbar {
+  .site-logo {
+    margin-right: auto;
+  }
   > {
     .container-navbar-inner {
       justify-content: flex-end;

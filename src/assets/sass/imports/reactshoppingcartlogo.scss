@@ -1,0 +1,25 @@
+.site-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+.react-logo {
+  display: flex;
+  align-items: center;
+  > :not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
+.site-logo-icon {
+  font-size: 2rem;
+  color: rgb(97, 218, 251);
+}
+
+.site-logo-text-react {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.site-logo-text-shopping-cart {
+  font-size: 1.2rem;
+}
