@@ -76,7 +76,10 @@ class App extends Component {
       this.setState({ counters });
     }
   };
-  handleSubmit = productInputValue => {
+  handleSubmit = (event, productInputValue) => {
+    // console.log("event", event);
+    event.preventDefault();
+
     const numOfCounters = productInputValue;
     // console.log("numOfCounters", numOfCounters);
 

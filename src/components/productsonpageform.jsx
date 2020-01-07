@@ -12,7 +12,10 @@ class ProductsOnPageForm extends Component {
     return (
       <form
         className="products-on-page"
-        onSubmit={() => this.props.onSubmit(this.state.productInputValue)}
+        // onSubmit={() => this.props.onSubmit(this.state.productInputValue)}
+        onSubmit={event =>
+          this.props.onSubmit(event, this.state.productInputValue)
+        }
       >
         <div className="form-group">
           <label className="form-label input-label" htmlFor="productInput">
