@@ -17,17 +17,15 @@ class ProductsOnPageForm extends Component {
           this.props.onSubmit(event, this.state.productInputValue)
         }
       >
-        <div className="form-group">
-          <label className="form-label input-label" htmlFor="productInput">
-            Number of Products on Page
-          </label>
-          <input
-            type="number"
-            className="form-control"
-            id="productInput"
-            onChange={this.handleChange}
-          />
-        </div>
+        <label className="form-label input-label" htmlFor="productInput">
+          Number of Products on Page
+        </label>
+        <input
+          type="number"
+          className="form-control"
+          id="productInput"
+          onChange={this.handleChange}
+        />
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
