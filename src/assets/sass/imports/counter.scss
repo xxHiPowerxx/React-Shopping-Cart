@@ -1,1 +1,8 @@
 @import "./counters.scss";
+
+.counters {
+  > * {
+    float: left;
+    clear: left;
+  }
+}

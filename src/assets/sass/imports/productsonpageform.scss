@@ -1,7 +1,15 @@
 .products-on-page {
   @extend .flex-align-items-center;
-  .form-group {
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 13rem;
+  .input-label {
+    flex: 1 1 100%;
+  }
+  .form-control {
     margin-bottom: 0;
     margin-right: 1rem;
+    flex: 1;
+    max-width: 7rem;
   }
 }

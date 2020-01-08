@@ -3,6 +3,7 @@
   padding: 1rem;
   max-width: 30rem;
   border-radius: 0.25rem;
+  display: inline-block;
   &:hover,
   &:focus-within {
     box-shadow: 0 0.35rem 0.35rem rgba(0, 0, 0, 0.35);

@@ -2,8 +2,27 @@
 @import "/productsonpageform.scss";
 @import "/productsincart.scss";
 .navbar {
+  padding-left: 0;
+  padding-right: 0;
   .site-logo {
     margin-right: auto;
+  }
+  form.products-on-page {
+    margin-top: 1rem;
+    flex: 1 1 100%;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: unset;
+    @media (min-width: 576px) {
+      margin-left: 2rem;
+      margin-right: 0;
+      margin-top: 0;
+      flex-basis: 0%;
+      max-width: 13rem;
+    }
+    @media (min-width: 992px) {
+      margin-left: 0;
+    }
   }
   > {
     .container-navbar-inner {
@@ -15,5 +34,12 @@
 .container-navbar-inner {
   > :not(:first-child) {
     margin-left: 2rem;
+  }
+  .site-logo {
+    + * {
+      @media (min-width: 992px) {
+        margin-left: 0;
+      }
+    }
   }
 }
