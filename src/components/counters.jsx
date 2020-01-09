@@ -15,6 +15,7 @@ class Counters extends Component {
         <button onClick={onReset} className="btn btn-primary btn-sm m-2">
           Reset
         </button>
+        <div className="counters-inner">
         {counters.map(counter => (
           <Counter
             key={counter.id}
@@ -22,8 +23,9 @@ class Counters extends Component {
             onIncrement={onIncrement}
             onDecrement={onDecrement}
             counter={counter}
-          ></Counter>
+          />
         ))}
+        </div>
       </div>
     );
   }
