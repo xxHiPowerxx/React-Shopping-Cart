@@ -2,20 +2,18 @@ import React, { Component } from "react";
 
 class ProductsOnPageForm extends Component {
   state = {
-    productInputValue: 0
+    productInput: null
   };
   handleChange = event => {
     console.log(event.target.value);
-    this.setState({ productInputValue: event.target.value });
+    this.setState({ productInput: event.target });
   };
   render() {
     return (
       <form
         className="products-on-page"
         // onSubmit={() => this.props.onSubmit(this.state.productInputValue)}
-        onSubmit={event =>
-          this.props.onSubmit(event, this.state.productInputValue)
-        }
+        onSubmit={event => this.props.onSubmit(event, this.state.productInput)}
       >
         <label className="form-label input-label" htmlFor="productInput">
           Number of Products on Page
