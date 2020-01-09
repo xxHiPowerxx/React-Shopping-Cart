@@ -1,8 +1,47 @@
-@import "./counters.scss";
-
-.counters {
-  > * {
-    float: left;
-    clear: left;
+.counter {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  max-width: 30rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin: 0.5rem;
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 0.35rem 0.35rem rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.15);
   }
+  &,
+  &:hover ~ .counter:focus-within {
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+.counter-controls {
+  display: flex;
+  align-items: flex-end;
+}
+.ctnr-counter-value {
+  @extend .flex-align-items-center;
+  flex-direction: column;
+  justify-content: center;
+}
+.counter-controls {
+  > :not(:first-child) {
+    margin-left: 0.5em;
+  }
+  > :not(:last-child) {
+    margin-right: 0.5em;
+  }
+}
+.ctnr-counter-value {
+  min-width: 2.616rem;
+  justify-content: center;
+}
+.counter-value {
+  padding: 0.25rem 0.5rem;
+}
+.counter-image {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
 }
