@@ -3,9 +3,15 @@ import React, { Component } from "react";
 class Counter extends Component {
   render() {
     const counter = this.props.counter;
+    const productNum = "Product #" + counter.id;
     return (
       <div className="counter smooth-transition">
-        <h4 className="counter-title">Product #{counter.id}</h4>
+        <h4 className="counter-title">{productNum}</h4>
+        <img
+          className="counter-image"
+          src={"https://picsum.photos/309/174?random=" + counter.id}
+          alt={"image of " + productNum}
+        />
         <div className="counter-controls">
           <div className="ctnr-counter-value">
             <small className="quantity">Qty.</small>
