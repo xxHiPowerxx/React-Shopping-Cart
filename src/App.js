@@ -114,7 +114,7 @@ class App extends Component {
           totalCounters={this.state.counters.filter(c => c.value > 0).length}
           onSubmit={this.handleSubmit}
         />
-        <main className="container">
+        <main className="container sizeHeaderPadTar">
           <Counters
             counters={this.state.counters}
             onReset={this.handleReset}

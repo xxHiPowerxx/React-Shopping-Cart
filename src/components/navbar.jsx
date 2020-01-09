@@ -3,6 +3,7 @@ import ReactShoppingCartLogo from "./reactshoppingcartlogo";
 import ProductsOnPageForm from "./productsonpageform";
 import ProductsInCart from "./productsincart";
 import ResizeSensor from "css-element-queries/src/ResizeSensor";
+import sizeHeaderPad from "../assets/js/sizeHeaderPad";
 
 // Stateless Functional Component No Longer
 
@@ -23,10 +24,19 @@ const InvertOrderComponent = ({ condition, props }) => {
 };
 
 class NavBar extends Component {
+  doSizeHeaderPad() {
+    const sizeHeaderPadTar = document.querySelector(".sizeHeaderPadTar"),
+      sizeHeaderPadTarParent = document.getElementById("root"),
+      sizeHeaderPadRef =
+        this._nav || document.querySelector(".sizeHeaderPadRef");
+    sizeHeaderPad(sizeHeaderPadTar, sizeHeaderPadTarParent, sizeHeaderPadRef);
+  }
+
   componentDidMount() {
     const that = this;
     const node = this._nav;
     new ResizeSensor(node, function() {
+      that.doSizeHeaderPad();
       const invertOrder = node.clientWidth > 576;
       return that.setState({ invertOrder });
     });
@@ -43,7 +53,7 @@ class NavBar extends Component {
     // This way we don't need to import ReactDOM in order to use ReactDOM.findDOMNode(this); yay efficiency.
     return (
       <nav
-        className="navbar navbar-dark bg-dark text-light"
+        className="navbar navbar-dark bg-dark text-light sizeHeaderPadRef"
         ref={c => (this._nav = c)}
       >
         <div className="container container-navbar-inner">
