@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Counter from "../Counter/Counter";
+import Counter from "./Counter/Counter";
 
 import "./Counters.scss";
 

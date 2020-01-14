@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ReactShoppingCartLogo from "../ReactShoppingCartLogo/ReactShoppingCartLogo";
-import ProductsOnPageForm from "../ProductsOnPageForm/ProductsOnPageForm";
-import ProductsInCart from "../ProductsInCart/ProductsInCart";
+import ReactShoppingCartLogo from "./ReactShoppingCartLogo/ReactShoppingCartLogo";
+import ProductsOnPageForm from "./ProductsOnPageForm/ProductsOnPageForm";
+import ProductsInCart from "./ProductsInCart/ProductsInCart";
 import ResizeSensor from "css-element-queries/src/ResizeSensor";
 import sizeHeaderPad from "../../assets/js/sizeHeaderPad";
 
