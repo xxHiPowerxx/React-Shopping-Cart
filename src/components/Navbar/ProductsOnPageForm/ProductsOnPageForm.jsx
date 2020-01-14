@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import "./ProductsOnPageForm.scss";
+
 class ProductsOnPageForm extends Component {
   state = {
     productInput: null

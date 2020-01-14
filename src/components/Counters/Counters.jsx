@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Counter from "./counter";
+import Counter from "./Counter/Counter";
+
+import "./Counters.scss";
 
 class Counters extends Component {
   render() {
@@ -16,15 +18,15 @@ class Counters extends Component {
           Reset
         </button>
         <div className="counters-inner">
-        {counters.map(counter => (
-          <Counter
-            key={counter.id}
-            onDelete={onDelete}
-            onIncrement={onIncrement}
-            onDecrement={onDecrement}
-            counter={counter}
-          />
-        ))}
+          {counters.map(counter => (
+            <Counter
+              key={counter.id}
+              onDelete={onDelete}
+              onIncrement={onIncrement}
+              onDecrement={onDecrement}
+              counter={counter}
+            />
+          ))}
         </div>
       </div>
     );
