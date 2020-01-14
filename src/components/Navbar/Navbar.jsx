@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import ReactShoppingCartLogo from "./reactshoppingcartlogo";
-import ProductsOnPageForm from "./productsonpageform";
-import ProductsInCart from "./productsincart";
+import ReactShoppingCartLogo from "../ReactShoppingCartLogo/ReactShoppingCartLogo";
+import ProductsOnPageForm from "../ProductsOnPageForm/ProductsOnPageForm";
+import ProductsInCart from "../ProductsInCart/ProductsInCart";
 import ResizeSensor from "css-element-queries/src/ResizeSensor";
-import sizeHeaderPad from "../assets/js/sizeHeaderPad";
+import sizeHeaderPad from "../../assets/js/sizeHeaderPad";
+
+import "./Navbar.scss";
 
 // Stateless Functional Component No Longer
 

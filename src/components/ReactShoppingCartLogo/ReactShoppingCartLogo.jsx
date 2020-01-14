@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 
+import "./ReactShoppingCartLogo.scss";
+
 class ReactShoppingCartLogo extends Component {
   state = {};
   render() {

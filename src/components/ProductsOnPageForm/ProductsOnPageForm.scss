@@ -1,5 +1,6 @@
 .products-on-page {
-  @extend .flex-align-items-center;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
   flex: 1;
   max-width: 13rem;
