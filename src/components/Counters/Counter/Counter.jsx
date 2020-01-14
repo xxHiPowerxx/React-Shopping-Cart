@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+import componentId from "./Counter";
 
 import "./Counter.scss";
 
 class Counter extends Component {
+  componentWillMount() {
+    this.componentId = this.constructor.name + "-" + componentId();
+  }
   render() {
     const counter = this.props.counter;
     const productNum = "Product #" + counter.id;
     return (
-      <div className="counter smooth-transition">
+      <div className="counter smooth-transition" componentId={this.componentId}>
         <h4 className="counter-title">{productNum}</h4>
         <img
           className="counter-image"
