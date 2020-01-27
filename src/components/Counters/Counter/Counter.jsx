@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import componentId from "./Counter";
+import componentId from "./Counter.utils";
 
 import "./Counter.scss";
 
